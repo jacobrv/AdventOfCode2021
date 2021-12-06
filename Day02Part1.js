@@ -10,10 +10,6 @@ for(let i=0; i<vals.length; i++) {
             horiz += parseInt(temp[1]);
             break;
 
-        case 'backward':
-            horiz -= parseInt(temp[1]);
-            break;
-
         case 'up':
             depth -= parseInt(temp[1]);
             break;
