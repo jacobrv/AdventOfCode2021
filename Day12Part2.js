@@ -74,7 +74,7 @@ console.log(paths);
 
 function findPathsFromPoint(point) {
     let t = paths.filter(path=>{
-        return path.indexOf(point)>=0;
+        return path.includes(point);
     });
     let out = [];
     t.forEach(tt=> {
@@ -99,7 +99,7 @@ function doStep(currentPosition, pathSoFar, hasUsedDoubleSmall) {
         return;
     }
 
-    if(currentPosition.toLowerCase() == currentPosition && pathSoFar.filter(psf => psf==currentPosition).length > 0) {
+    if(currentPosition.toLowerCase() == currentPosition && pathSoFar.includes(currentPosition)) {
         // can only double back on a small cave once
         if(hasUsedDoubleSmall) {
             return;
